@@ -9,6 +9,7 @@
 \usepackage{float}
 \usepackage{struktex}
 \usepackage{ulem}
+\usepackage{pdfpages}
 
 \title{EZS}
 \author{Simon Krücken}
@@ -23,7 +24,9 @@
 \tableofcontents
 \pagebreak
 
-\section{Unterlagenfreier Teil}
+
+
+\section[Standard Fragen]{Standard Frage}
 
 1. Wo mit Beschäftigt sich IT-Sicherheit(Definition)?\\
 IT-Sicherheit beschäftigt sich mit der Vorbeugung, dem Erkennen und der Reaktion auf Ereignisse, die die Integrität der Daten, die Nutzbarkeit der Systeme und die (digitale) Privatsphäre gefährden.\\
@@ -42,4 +45,19 @@ IT-Sicherheit beschäftigt sich mit der Vorbeugung, dem Erkennen und der Reaktio
 	\item Verfügbarkeit
 \end{itemize}
 
+\section{Eigener Verschlüsslungs Algo.}
+12 Stellige Passwörter werden nach dem Muster abuvcdwxefyz gebildet.
+Wobei uvwxyz der Passwort Kern \*\&asz6K\* ist. und \*ab\* die ersten beiden Buchstaben der url entsprechen.
+\*cd\* den dritten und vierten Buchstaben welche um ROT+1 verschoben sind. Und schlussendlich \*ef\* die letzten beiden Buchstaben welche
+um ROT-1 verschoben sind. URLs Kürzer als 6 zeichen werden einfach wiederholt.\\
+
+www.heise.de =$>$ heiseh\\
+abuvcdwxefyz\\
+he\&ajtszdg6K\\
+
+\section{CBC ECB CTR}
+\includegraphics[scale=0.5]{cbc_ecb_ctr.png}
+
+\section{Anhang}
+\includepdf[]{ascii_tabelle.pdf}
 \end{document}
