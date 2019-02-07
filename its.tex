@@ -10,6 +10,7 @@
 \usepackage{struktex}
 \usepackage{ulem}
 \usepackage{pdfpages}
+\usepackage{listings}
 
 \title{EZS}
 \author{Simon Krücken}
@@ -22,8 +23,6 @@
 %    \maketitle
 \end{titlepage}
 \tableofcontents
-\pagebreak
-
 
 
 \section[Standard Fragen]{Standard Frage}
@@ -55,8 +54,19 @@ www.heise.de =$>$ heiseh\\
 abuvcdwxefyz\\
 he\&ajtszdg6K\\
 
-\section{CBC ECB CTR}
-\includegraphics[scale=0.5]{cbc_ecb_ctr.png}
+\section{Dateirechte}
+Dateirechte so setzten das sie Superuser Rechte hat auch wenn sie nicht als Superuser gestartet wurde.
+\begin{lstlisting}
+	sudo chown root:root get_pic
+\end{lstlisting}
+
+Datei /usr/local/bin/backup nur für Besitzer $>$local$<$ lesbar, schreibbar und ausführbar machen. Die Gruppe $>$its$<$ soll die Datei nur ausführen dürfen.
+\begin{lstlisting}
+	chown local /usr/local/bin/backup
+	chgrp its /usr/local/backup
+	chmod 710 /usr/local/bin/backup
+\end{lstlisting}
+
 
 \section{Anhang}
 
